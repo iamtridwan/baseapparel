@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300;1,500;1,700&display=swap');
+
+
+:root{
+    --font:'Josefin Sans';
+    --bg-color:hsl(0, 36%, 70%);
+    --soft:hsl(0, 93%, 68%);
+    --Grayish-Red: hsl(0, 6%, 24%);
+    --pattern :linear-gradient(135deg, hsl(0, 0%, 100%),  hsl(0, 100%, 98%));
+    --pat2:linear-gradient(135deg,  hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+}
+
+
+
+* {
+    line-height:1.6;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: var(--font);
+}
+/* body {
+    margin: 0;
+    padding: 0;
+} */
+
+.container {
+        width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 580px;
+        grid-template-areas:
+        'left right' ;
+    }
+    .container .model-image{
+        grid-area:right
+    }
+.container .model-image img{
+    width:100%;
+    height: 100%;
+    /* object-fit:cover; */
+    margin:auto;
+}
+
+.logo, 
+.write-up{
+    width: 70%;
+    grid-area: left;
+    margin: 30px auto;
+    background: linear-gradient(--pattern);
+   
+}
+
+.logo{
+    position: relative;
+    top: 40px;
+    margin-bottom: 30px;
+    padding:10px;
+}
+.write-up{
+    position: relative;
+    top: 120px;
+}
+.write-up h1{
+    text-align:left;
+    width: 90%;
+    font-size: 3rem;
+    margin: 10px auto;
+    line-height:.6;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform:uppercase;
+    color:var(--Grayish-Red);
+}
+.write-up span{
+    color:var(--bg-color);
+    font-weight:300;
+    display: inline-block;
+    position: relative;
+    top: 25px;
+}
+
+.write-up p{
+    text-align:left;
+    font-size:18px;
+    color: var(--bg-color);
+    line-height:1.3;
+}
+
+.write-up input{
+    width:80%;
+    margin:30px 0;
+    padding: 15px;
+    border: 2px solid var(--bg-color);
+    border-radius: 30px;
+    outline:none;
+
+}
+
+.write-up input[placeholder]{
+    color: var(--bg-color);
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+ }
+ .btn button {
+     position: initial;
+     width:60px;
+     height:57px;
+     padding:20px;
+     background: var(--pat2);
+     border:none;
+     border-radius:20px;
+     margin-left: -60px;
+     box-shadow: -6px 8px 25px var(--soft);
+
+ }
+.attribution { 
+    margin-top:40px;
+    font-size: 14px; 
+    text-align: center; 
+}
+.attribution a{ 
+    color: hsl(228, 45%, 44%); 
+    background:linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+@media screen and (max-width:500px) {
+    .container {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .container .logo {
+        flex: 1;
+    }
+
+    .container .logo img{
+
+        width: 40%;
+        margin: 50px 40px;
+
+    }
+    .logo{
+        position:initial;
+        margin:0;
+        padding:0;
+    }
+    .model-image{
+        width:100%;
+        margin:10px 0;
+
+    }
+    .model-image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .write-up {
+        position:initial;
+        width: 88%;
+        margin: 30px auto;
+    }
+
+    .write-up h1{
+        text-align:left;
+        font-size: 3rem;
+        width: 70%;
+        margin: 10px auto;
+        line-height:1;
+        font-weight: 600;
+        text-transform:uppercase;
+        letter-spacing:5px;
+        color:var(--Grayish-Red);
+    }
+    .write-up span{
+        color:var(--bg-color);
+        font-weight:300;
+        display:inline-block;
+        margin-bottom:-20px;
+    }
+
+    .write-up p{
+        text-align:center;
+        font-size:18px;
+        color: var(--bg-color);
+        line-height:1.3;
+    }
+
+    .write-up input{
+        width:80%;
+        margin:30px 0;
+        padding: 15px;
+        border: 2px solid var(--bg-color);
+        border-radius: 30px;
+
+    }
+
+    .write-up input[placeholder]{
+        color: var(--bg-color);
+        font-size: 16px;
+        margin-left: 20px;
+    }
+    .btn{
+       display: flex;
+       align-items: center;
+    }
+    .btn button {
+        position: initial;
+        width:60px;
+        height:57px;
+        padding:20px;
+        background: var(--pat2);
+        border:none;
+        border-radius:20px;
+        margin-left: -60px;
+        box-shadow: -6px 8px 25px var(--soft);
+
+    }
+
+
+.attribution { 
+            font-size: 14px; 
+            text-align: center; 
+        }
+.attribution a{ 
+    color: hsl(228, 45%, 44%); 
+    background:linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+}
